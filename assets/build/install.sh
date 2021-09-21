@@ -18,11 +18,21 @@ apk add --no-cache --virtual .builddev \
   libassuan-dev \
   libgpg-error-dev \
   gpgme-dev \
-  coreutils
+  coreutils \
+  bash c-ares-dev curl-dev expat-dev \
+  gettext git gnupg go graphicsmagick icu-dev \
+  libcurl libressl-dev libxml2-dev linux-headers \
+  logrotate lua-cjson lua-mqtt-publish lua5.3 \
+  nginx nodejs nodejs openssh openssl-dev \
+  pcre2-dev postgresql-client postgresql-dev re2-dev rsync \
+  ruby ruby-bundler ruby-rdoc ruby-rake ruby-bigdecimal ruby-irb ruby-dev\
+  s6 su-exec tzdata yarn zlib-dev 
 
 sudo -u git -H echo "install: --no-document" > ~/.gemrc
 
 echo "git ALL=(ALL) NOPASSWD: ALL" > /etc/sudoers.d/git
+
+# gem update --system 
 
 # Install
 ash -ex /home/git/assets/build/install_gitlab.sh

@@ -7,8 +7,9 @@ cd /home/git/gitlab-shell
 
 sudo -u git -H cp /home/git/gitlab-shell/config.yml.example /home/git/gitlab-shell/config.yml
 
-./bin/compile
-./bin/install
+#./bin/compile
+#./bin/install
+make setup
 
 cd
 

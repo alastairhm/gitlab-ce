@@ -1,10 +1,9 @@
-FROM node:8.15.1-alpine
+#FROM 761045508220.dkr.ecr.eu-west-2.amazonaws.com/dwp/ucfs/platform/base:ucfs-build-latest
+FROM node:current-alpine3.14
 
 RUN apk upgrade --no-cache && \
     apk add --no-cache \
-      vim \
       sudo \
-      git \
       ruby ruby-bundler ruby-rdoc ruby-rake ruby-bigdecimal ruby-irb \
       postgresql-client \
       tzdata \
@@ -12,7 +11,8 @@ RUN apk upgrade --no-cache && \
       nginx \
       patch \
       dcron \
-      logrotate
+      logrotate \
+      git
 
 COPY assets /home/git/assets/
 
